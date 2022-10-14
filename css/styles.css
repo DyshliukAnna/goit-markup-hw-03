@@ -22,6 +22,11 @@ body {
 }
 /* Header */
 
+.container {
+  width: 1600px;
+  margin: 0 auto;
+  height: 78px;
+}
 .list {
   list-style: none;
 }
@@ -39,7 +44,9 @@ body {
 .logo-header:hover {
   text-decoration: underline;
 }
-
+.logo-dark {
+  color: var(--logo-dak-color);
+}
 .logo-header:hover .logo-dark {
   color: var(--logo-dak-color);
 }
