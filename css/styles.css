@@ -62,7 +62,7 @@ img {
   justify-content: flex-start;
 
 }
-.flex-nav:not(last-child) {
+.flex-nav:not(:last-child) {
   background-color: var(--primary-background-color);
   display: flex;
   align-items: center;
@@ -250,7 +250,24 @@ margin-right: 50px;
 .main-section {
   background-color: var(--hero-color);
 }
+/* Контейнер для флексів */
 
+.main-section-container {
+ display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+
+}
+.list-main-section {
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.flex-description:not(:last-child){
+  margin-right: 30px;
+}
 /* Секція : "Наші переваги" */
 
 .title-description {
@@ -271,6 +288,27 @@ margin-right: 50px;
   text-align: center;
   margin-bottom: 50px;
 }
+.main-flex-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+}
+
+.main-list-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+}
+.flex-list {
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  margin-right: 30px;
+}
+
+
+
+
 /* Секція з фотографіями нашої команди */
 .secondary-title {
   font-size: 36px;
@@ -281,8 +319,37 @@ margin-right: 50px;
 .secondary-section {
   background-color: var(--secondary-background-color);
 }
+/* Флекси для секції з фотографіями команди */
+.secondary-flex-container{
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+}
+
+.secondary-container:not(:last-child) {
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+}
+.secondary-list-container:not(:last-child){
+  display: flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  margin-right: 30px;
+}
+.item-secondary-flex {
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  max-width: 270px;
+  margin: 0;
+}
+
+
 .team-box {
   background-color: var(--primary-background-color);
+  max-width: 270px;
+  display: block;
 }
 /* Відступи від фотографії учасника до заголовку в секції secondary section */
 .image-margin {
@@ -293,7 +360,7 @@ margin-right: 50px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
-  text-align: center;
+  /* text-align: center; */
 
   margin-bottom: 10px;
 }
@@ -302,7 +369,7 @@ margin-right: 50px;
 
   font-size: 16px;
   line-height: calc(19 / 16);
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* Сторінка Портфоліо. Стилізація кнопок і карток*/
@@ -389,6 +456,26 @@ margin-right: 50px;
 .footer {
   background-color: var(--hero-background-color);
 }
+
+.container-footer-nav {
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-right: 0;
+}
+
+
+.flex-address-footer{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 .logo-footer {
   color: var(--accent-color);
 
@@ -398,6 +485,7 @@ margin-right: 50px;
   line-height: calc(31 / 26);
 
   text-decoration: none;
+  margin-bottom: 20px;
 }
 .logo-footer:hover {
   text-decoration: underline;
@@ -412,6 +500,7 @@ margin-right: 50px;
 
   font-style: normal;
   text-decoration: none;
+  margin-bottom: 9px;
 }
 .footer-contacts:hover {
   color: var(--accent-color);
@@ -426,6 +515,7 @@ margin-right: 50px;
 
   font-style: normal;
   text-decoration: none;
+  margin-bottom: 9px;
 }
 .footer-adress:hover {
   color: var(--accent-color);
