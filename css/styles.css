@@ -43,7 +43,7 @@ img {
 }
 .container {
   width: 100%;
-  max-width: 1232px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0;
 }
@@ -53,14 +53,13 @@ img {
 
 .list {
   list-style: none;
-  
 }
 
 .container-header-nav {
- display: flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
-
+  padding-right: 0;
 }
 .flex-nav:not(:last-child) {
   background-color: var(--primary-background-color);
@@ -73,25 +72,22 @@ img {
 .flex-mail-header {
   display: flex;
   align-items: center;
-  justify-content:flex-end;
-  margin-right: 0;
-}
- .flex-nav> .mail-link {
- 
- }
-.list-header{
-  display: flex;
-  flex-direction:row;
-  justify-content: flex-start;
-  margin-right: 50px;
-  }
-.list-header:last-child {
-  margin-right: 0;
-}
-.list-header> .nav-item:not(:last-child) {
-margin-right: 50px;
+  justify-content: flex-end;
+  margin-right: 0px;
 }
 
+.list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.list-header:last-child {
+  margin-right: 0;
+  padding-right: 0;
+}
+.list-header > .nav-item:not(:last-child) {
+  margin-right: 50px;
+}
 
 .logo-header {
   color: var(--accent-color);
@@ -123,7 +119,10 @@ margin-right: 50px;
   letter-spacing: 0.02em;
 
   text-decoration: none;
-   display: block;
+  display: block;
+}
+.nav-item: {
+  padding-right: 0;
 }
 .nav-link:hover {
   color: var(--accent-color);
@@ -132,13 +131,6 @@ margin-right: 50px;
 .nav-link:focus {
   color: var(--accent-color);
 }
-
-/* /* .test:last-child {
-  margin-bottom: 0px;
-}
-.test:not(:last-child) {
-  margin-bottom: 50px; */
-} */
 
 /* Email в header */
 
@@ -149,8 +141,6 @@ margin-right: 50px;
   letter-spacing: 0.02em;
 
   text-decoration: none;
-
-  margin-right: 50px;
 }
 .mail-link:hover {
   color: var(--accent-color);
@@ -168,6 +158,8 @@ margin-right: 50px;
   letter-spacing: 0.02em;
 
   text-decoration: none;
+
+  flex-shrink: 0;
 }
 .header-phone:hover {
   color: var(--accent-color);
@@ -193,8 +185,10 @@ margin-right: 50px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
-  margin-bottom: 30px;
-  /* margin-top: 200px; */
+  margin: 0 auto 30px;
+  
+  max-width: 696px;
+
 }
 /* Кнопка на головній сторінці */
 
@@ -215,6 +209,8 @@ margin-right: 50px;
   cursor: pointer;
   margin: 0 auto;
   padding: 10px 32px;
+
+  max-width: 280px;: ;
   /* margin-bottom: 200px; */
 
   border: 0;
@@ -253,19 +249,18 @@ margin-right: 50px;
 /* Контейнер для флексів */
 
 .main-section-container {
- display: flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
-
 }
 .list-main-section {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: flex-start;
   list-style: none;
 }
 
-.flex-description:not(:last-child){
+.flex-description:not(:last-child) {
   margin-right: 30px;
 }
 /* Секція : "Наші переваги" */
@@ -290,70 +285,77 @@ margin-right: 50px;
 }
 .main-flex-container {
   display: flex;
-  flex-direction:row;
+  flex-direction: column;
   justify-content: flex-start;
 }
 
 .main-list-container {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: flex-start;
+   gap: 30px;
+  flex-basis: calc((100-60px)/3);
 }
-.flex-list {
+.flex-list{
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: flex-start;
-  margin-right: 30px;
+  gap: 30px;
+  flex-basis: calc((100-60px)/3);
+  
 }
-
-
-
 
 /* Секція з фотографіями нашої команди */
 .secondary-title {
   font-size: 36px;
   line-height: calc(42 / 36);
-  text-align: center;
-  margin-bottom: 50px;
+  /* text-align: center; */
+
+  margin: 0 auto 50px;
 }
 .secondary-section {
   background-color: var(--secondary-background-color);
 }
 /* Флекси для секції з фотографіями команди */
-.secondary-flex-container{
+
+.secondary-container {
   display: flex;
-  flex-direction:row;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.secondary-list-container {
+  display: flex;
+  flex-direction: row;
   justify-content: flex-start;
 }
 
-.secondary-container:not(:last-child) {
-  display: flex;
-  flex-direction:row;
-  justify-content: flex-start;
-}
-.secondary-list-container:not(:last-child){
-  display: flex;
-  flex-direction:row;
-  justify-content: flex-start;
-  margin-right: 30px;
-}
 .item-secondary-flex {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: flex-start;
   max-width: 270px;
-  margin: 0;
+  
 }
 
-
-.team-box {
-  background-color: var(--primary-background-color);
-  max-width: 270px;
-  display: block;
+.item-secondary-flex:not(:last-child) {
+  margin-right: 30px;
 }
+
 /* Відступи від фотографії учасника до заголовку в секції secondary section */
+
+.image-secondary-flex {
+  margin-bottom: 30px;
+}
+
 .image-margin {
   margin-bottom: 30px;
+}
+.team-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .team-box-title {
@@ -386,9 +388,21 @@ margin-right: 50px;
 
 /* Відстіпи від кнопок до карток */
 .secondary-buttons {
-  margin-bottom: 50px;
+  margin-bottom: 56px;
 }
 /* Основне оформлення кнопок  на стопрінці Портфоліо*/
+
+.secondary-buttons:not(:last-child) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  margin-right: 8px;
+}
+
+.item-secondary-button {
+  margin-right: 8px;
+}
 .secondary-button {
   color: var(--primary-color);
   background-color: var(--secondary-background-color);
@@ -402,8 +416,11 @@ margin-right: 50px;
   cursor: pointer;
   border: 0;
   border-radius: 4px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
 }
-
 .secondary-button:hover {
   color: var(--hero-color);
   background-color: var(--accent-color);
@@ -422,6 +439,12 @@ margin-right: 50px;
 }
 
 /* Основне оформлення карток */
+
+.list-prtfolio-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .title-item-card {
   color: var(--primary-color);
 
@@ -432,6 +455,14 @@ margin-right: 50px;
   text-decoration: none;
 
   margin-bottom: 4px;
+}
+.item-prtfolio-flex {
+  margin-bottom: 20px;
+  border: ;
+}
+.item-prtfolio-flexpart {
+  padding: 20px 24px;
+  border-left: 2px;
 }
 
 .title-item-card:hover {
@@ -450,6 +481,8 @@ margin-right: 50px;
 
 .text-decoration-portfolio {
   text-decoration: none;
+  max-width: 370px;
+
 }
 
 /* Footer */
@@ -459,7 +492,7 @@ margin-right: 50px;
 
 .container-footer-nav {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: flex-start;
 
   padding-top: 60px;
@@ -467,14 +500,11 @@ margin-right: 50px;
   padding-right: 0;
 }
 
-
-.flex-address-footer{
-
+.flex-address-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 
 .logo-footer {
   color: var(--accent-color);
