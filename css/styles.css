@@ -36,6 +36,9 @@ ul {
 }
 /* Header */
 
+.header {
+  background-color: var(--primary-background-color);
+}
 img {
   display: block;
   max-width: 100%;
@@ -45,51 +48,46 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 15px;
 }
 .section {
   padding: 94px 0;
+  outline: 2px solid tomato;
 }
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .container-header-nav {
   display: flex;
+  text-align: center;
+}
+.flex-nav {
+  display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  padding-right: 0;
-}
-.flex-nav:not(:last-child) {
-  background-color: var(--primary-background-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 344px;
-}
 
-.flex-mail-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 0px;
+  background-color: var(--primary-background-color);
+
+  margin-right: 344px;
 }
 
 .list-header {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
 }
-.list-header:last-child {
-  margin-right: 0;
-  padding-right: 0;
-}
-.list-header > .nav-item:not(:last-child) {
+
+.list-header li:not(:last-child) {
   margin-right: 50px;
 }
 
 .logo-header {
+  display: flex;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
   color: var(--accent-color);
 
   font-family: 'Raleway', sans-serif;
@@ -98,7 +96,6 @@ img {
   line-height: calc(31 / 26);
 
   text-decoration: none;
-  margin-right: 93px;
 }
 .logo-header:hover {
   text-decoration: underline;
@@ -113,15 +110,20 @@ img {
 /* Навігація */
 
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-color);
 
   font-weight: 500;
   letter-spacing: 0.02em;
 
   text-decoration: none;
-  display: block;
 }
-.nav-item: {
+.nav-item {
+  display: flex;
+
   padding-right: 0;
 }
 .nav-link:hover {
@@ -135,6 +137,9 @@ img {
 /* Email в header */
 
 .mail-link {
+  padding-bottom: 32px;
+  padding-top: 32px;
+
   color: var(--secondary-color);
 
   font-weight: 500;
@@ -152,14 +157,16 @@ img {
 /* Телефон в header */
 
 .header-phone {
+  flex-shrink: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-color);
 
   font-weight: 500;
   letter-spacing: 0.02em;
 
   text-decoration: none;
-
-  flex-shrink: 0;
 }
 .header-phone:hover {
   color: var(--accent-color);
@@ -172,27 +179,38 @@ img {
 /* Cекція hero */
 
 .hero-section {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--hero-background-color);
 }
+
 .hero-title {
+  text-align: center;
+  margin: 0 auto 30px;
+  max-width: 696px;
+
   color: var(--hero-color);
 
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
 
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  margin: 0 auto 30px;
-  
-  max-width: 696px;
-
 }
 /* Кнопка на головній сторінці */
 
 .main-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 10px 32px;
+  border: 0;
+  border-radius: 4px;
+
   color: var(--hero-color);
   background-color: var(--accent-color);
 
@@ -201,29 +219,20 @@ img {
   font-size: 16px;
   line-height: calc(30 / 16);
 
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
 
   cursor: pointer;
-  margin: 0 auto;
-  padding: 10px 32px;
-
-  max-width: 280px;: ;
-  /* margin-bottom: 200px; */
-
-  border: 0;
-  border-radius: 4px;
 }
 .main-button:hover {
   color: var(--hero-color);
   background-color: var(--accent-background-color);
+
   text-decoration: underline;
 }
 .main-button:focus {
   color: var(--hero-color);
   background-color: var(--accent-background-color);
+
   outline: none;
 }
 /* 
@@ -244,6 +253,8 @@ img {
 /* Дві головні секціі для оформлення бекграунду*/
 
 .main-section {
+  padding-bottom: 24px;
+
   background-color: var(--hero-color);
 }
 /* Контейнер для флексів */
@@ -257,6 +268,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+
   list-style: none;
 }
 
@@ -266,9 +278,10 @@ img {
 /* Секція : "Наші переваги" */
 
 .title-description {
+  margin-bottom: 10px;
+
   text-transform: uppercase;
   font-size: 14px;
-  margin-bottom: 10px;
 }
 .description-benefits {
   color: var(--secondary-color);
@@ -278,40 +291,37 @@ img {
 /* Cерія фотографій з секції: "Чим ми займаємось" на головній сторінці*/
 
 .main-title {
-  font-size: 36px;
-  line-height: calc(42 / 36);
   text-align: center;
   margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: calc(42 / 36);
 }
 .main-flex-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-
 .main-list-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-   gap: 30px;
-  flex-basis: calc((100-60px)/3);
+  gap: 30px;
+  flex-basis: calc((100-60px) / 3);
 }
-.flex-list{
+.flex-list {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   gap: 30px;
-  flex-basis: calc((100-60px)/3);
-  
+  flex-basis: calc((100-60px) / 3);
 }
-
 /* Секція з фотографіями нашої команди */
 .secondary-title {
+  margin: 0 auto 50px;
+
   font-size: 36px;
   line-height: calc(42 / 36);
-  /* text-align: center; */
-
-  margin: 0 auto 50px;
 }
 .secondary-section {
   background-color: var(--secondary-background-color);
@@ -335,7 +345,6 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   max-width: 270px;
-  
 }
 
 .item-secondary-flex:not(:last-child) {
@@ -355,23 +364,20 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .team-box-title {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
-  /* text-align: center; */
-
-  margin-bottom: 10px;
 }
 .discription-command {
   color: var(--secondary-color);
 
   font-size: 16px;
   line-height: calc(19 / 16);
-  /* text-align: center; */
 }
 
 /* Сторінка Портфоліо. Стилізація кнопок і карток*/
@@ -383,6 +389,7 @@ img {
 
 .main-section-portfolio {
   background-color: var(--primary-background-color);
+
   text-decoration: none;
 }
 
@@ -404,6 +411,11 @@ img {
   margin-right: 8px;
 }
 .secondary-button {
+  text-align: center;
+  padding: 6px 22px;
+  border: 0;
+  border-radius: 4px;
+
   color: var(--primary-color);
   background-color: var(--secondary-background-color);
 
@@ -411,24 +423,19 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
-  text-align: center;
 
   cursor: pointer;
-  border: 0;
-  border-radius: 4px;
-  padding-bottom: 6px;
-  padding-top: 6px;
-  padding-right: 22px;
-  padding-left: 22px;
 }
 .secondary-button:hover {
   color: var(--hero-color);
   background-color: var(--accent-color);
+
   text-decoration: underline;
 }
 .secondary-button:focus {
   color: var(--hero-color);
   background-color: var(--accent-color);
+
   outline: none;
 }
 
@@ -446,6 +453,8 @@ img {
   gap: 30px;
 }
 .title-item-card {
+  margin-bottom: 4px;
+
   color: var(--primary-color);
 
   font-size: 18px;
@@ -453,8 +462,6 @@ img {
   letter-spacing: 0.06em;
 
   text-decoration: none;
-
-  margin-bottom: 4px;
 }
 .item-prtfolio-flex {
   margin-bottom: 20px;
@@ -480,9 +487,8 @@ img {
 }
 
 .text-decoration-portfolio {
-  text-decoration: none;
   max-width: 370px;
-
+  text-decoration: none;
 }
 
 /* Footer */
@@ -507,6 +513,8 @@ img {
 }
 
 .logo-footer {
+  margin-bottom: 20px;
+
   color: var(--accent-color);
 
   font-family: 'Raleway', sans-serif;
@@ -515,7 +523,6 @@ img {
   line-height: calc(31 / 26);
 
   text-decoration: none;
-  margin-bottom: 20px;
 }
 .logo-footer:hover {
   text-decoration: underline;
@@ -525,12 +532,13 @@ img {
 }
 
 .footer-contacts {
+  margin-bottom: 9px;
+
   color: rgba(255, 255, 255, 0.6);
   line-height: calc(24 / 14);
 
   font-style: normal;
   text-decoration: none;
-  margin-bottom: 9px;
 }
 .footer-contacts:hover {
   color: var(--accent-color);
@@ -540,12 +548,13 @@ img {
   color: var(--accent-color);
 }
 .footer-adress {
+  margin-bottom: 9px;
+
   color: var(--hero-color);
   line-height: calc(24 / 14);
 
   font-style: normal;
   text-decoration: none;
-  margin-bottom: 9px;
 }
 .footer-adress:hover {
   color: var(--accent-color);
