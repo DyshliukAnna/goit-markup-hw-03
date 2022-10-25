@@ -9,6 +9,7 @@
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
   --footer-background-color: #2f303f;
+  --footer-mail-phone-color: rgba(255, 255, 255, 0.6);
   --border-color-portfolio: #eeeeee;
   --border-color-header: #ececec;
 
@@ -87,14 +88,12 @@ img {
 
   text-decoration: none;
 }
-.logo-header:hover {
-  text-decoration: underline;
-}
+
 .logo-dark {
   color: var(--logo-dak-color);
 }
 .logo-header:hover .logo-dark {
-  color: var(--logo-dak-color);
+  color: var(--accent-color);
 }
 /* Навігація в Хедері */
 
@@ -111,6 +110,7 @@ img {
 }
 
 .nav-link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -124,7 +124,6 @@ img {
 
 .nav-link:hover {
   color: var(--accent-color);
-  text-decoration: underline;
 }
 
 .nav-link:focus {
@@ -162,7 +161,6 @@ img {
 
 .mail-link:hover {
   color: var(--accent-color);
-  text-decoration: underline;
 }
 .mail-link:focus {
   color: var(--accent-color);
@@ -185,8 +183,8 @@ img {
 
 .header-phone:hover {
   color: var(--accent-color);
-  text-decoration: underline;
 }
+
 .header-phone:focus {
   color: var(--accent-color);
 }
@@ -238,8 +236,6 @@ img {
 .main-button:hover {
   color: var(--hero-color);
   background-color: var(--accent-background-color);
-
-  text-decoration: underline;
 }
 .main-button:focus {
   color: var(--hero-color);
@@ -265,16 +261,16 @@ img {
 
 /* Дві головні секціі для оформлення бекграунду*/
 
-.main-section {
+.primary-section {
   background-color: var(--hero-color);
 }
 
 /* Контейнер для флексів в головній секції Наші переваги*/
 
-.main-section-container {
+.primary-section-container {
   display: flex;
 }
-.list-main-section {
+.list-primary-section {
   display: flex;
   flex-wrap: wrap;
 
@@ -304,6 +300,10 @@ img {
 }
 /* Флекси + серія фотографій з секції: "Чим ми займаємось" на головній сторінці*/
 
+.main-section {
+  background-color: var(--hero-color);
+  padding-top: 0;
+}
 .main-title {
   text-align: center;
   margin-bottom: 50px;
@@ -315,7 +315,6 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 0;
 }
 .main-list-container {
   display: flex;
@@ -341,6 +340,7 @@ img {
 
 .secondary-title {
   margin: 0 auto 50px;
+  text-align: center;
 
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -352,10 +352,6 @@ img {
 
 /* Флекси для секції з фотографіями команди */
 
-.secondary-container {
-  display: flex;
-  flex-direction: column;
-}
 .secondary-list-container {
   display: flex;
 
@@ -380,12 +376,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px;
+  background-color: var(--primary-background-color);
 }
-/* Відступи від фотографії учасника до заголовку в секції secondary section */
 
-.image-secondary-flex {
-  margin-bottom: 30px;
-}
 /* Основне оформлення секції з фотографіями команди secondary section*/
 .team-box-title {
   margin-bottom: 10px;
@@ -449,8 +443,6 @@ img {
 .secondary-button:hover {
   color: var(--hero-color);
   background-color: var(--accent-color);
-
-  text-decoration: underline;
 }
 .secondary-button:focus {
   color: var(--hero-color);
@@ -518,11 +510,9 @@ img {
 }
 
 /* Footer */
+
 .footer {
   background-color: var(--hero-background-color);
-}
-
-.section-footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -532,13 +522,12 @@ img {
   flex-direction: column;
 }
 
-.flex-address-footer {
-  display: block;
-  align-items: center;
+.flex-footer-adress {
   max-width: 231px;
 }
 
 .logo-footer {
+  display: block;
   margin-bottom: 20px;
 
   color: var(--accent-color);
@@ -551,51 +540,59 @@ img {
   text-decoration: none;
 }
 
-.logo-footer:hover {
-  text-decoration: underline;
-}
-
 .logo-light {
   color: var(--hero-color);
 }
+.logo-footer:hover .logo-light {
+  color: var(--accent-color);
+}
 
 .footer-adress {
-  display: block;
   margin-bottom: 9px;
+}
+
+.footer-adress-link {
+  display: block;
 
   color: var(--hero-color);
-  line-height: calc(24 / 14);
 
+  line-height: calc(24 / 14);
   font-style: normal;
+
   text-decoration: none;
 }
-.footer-adress:hover {
+
+.footer-adress-link:hover {
   color: var(--accent-color);
-  text-decoration: underline;
 }
 
-.footer-adress:focus {
+.footer-adress-link:focus {
   color: var(--accent-color);
 }
+
 .footer-contacts {
-  display: block;
   margin-bottom: 9px;
-
-  color: rgba(255, 255, 255, 0.6);
-  line-height: calc(24 / 14);
-
-  font-style: normal;
-  text-decoration: none;
 }
 
 .footer-contacts-nomargin {
-  display: block;
   margin-bottom: 0px;
 }
-.footer-contacts:hover {
-  color: var(--accent-color);
-  text-decoration: underline;
+
+.footer-link {
+  display: block;
+
+  color: var(--footer-mail-phone-color);
+
+  line-height: calc(24 / 14);
+  font-style: normal;
+
+  text-decoration: none;
 }
-.footer-contacts:focus {
+
+.footer-link:hover {
+  color: var(--accent-color);
+}
+
+.footer-link:focus {
   color: var(--accent-color);
 }
